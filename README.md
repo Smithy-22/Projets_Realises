@@ -9,6 +9,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
@@ -40,13 +41,14 @@ Chaque projet est présenté ci-dessous avec son **contexte**, sa **démarche**,
 | # | Projet | Domaine | Outils | Livrable |
 |:--|:--|:--|:--|:--|
 | 1 | [Prédiction de l'atterrissage du Falcon 9 — SpaceX](Presentation_de_projet_DS.pdf) | Machine learning | Python, scikit-learn | PDF |
-| 2 | [Prix de l'immobilier — King County, USA](01-data-science-python/king-county-house-sales-regression.pdf) | Régression | Python, pandas, scikit-learn | PDF |
-| 3 | [Feux de forêt en Australie](01-data-science-python/australia-wildfire-visualization.pdf) | Visualisation de données | Python, pandas | PDF |
-| 4 | [Student Performance Analysis Dashboard](02-business-intelligence/student-performance-dashboard.pdf) | Business Intelligence | Power BI | PBIX + PDF |
-| 5 | [Rapport de consommation d'énergie](02-business-intelligence/rapport-consommation-energie.xlsx) | Reporting | Excel | XLSX |
-| 6 | [Rapport d'analyse Excel](02-business-intelligence/rapport-analyse-excel.xlsx) | Reporting | Excel | XLSX |
-| 7 | [Le prix du Bitcoin et les grands agrégats macroéconomiques](03-econometrie-et-statistiques/bitcoin-agregats-macroeconomiques.pdf) | Économétrie | Séries temporelles | PDF |
-| 8 | [Aspirations des étudiants — enquête statistique](03-econometrie-et-statistiques/enquete-aspirations-etudiants.pdf) | Statistique appliquée | Enquête, statistique descriptive | PDF |
+| 2 | [Tesla & GameStop — cours de bourse et revenus](01-data-science-python/tesla-gamestop-stock-analysis.ipynb) | Web scraping & visualisation | Python, BeautifulSoup, yfinance, Plotly | Notebook |
+| 3 | [Prix de l'immobilier — King County, USA](01-data-science-python/king-county-house-sales-regression.pdf) | Régression | Python, pandas, scikit-learn | PDF |
+| 4 | [Feux de forêt en Australie](01-data-science-python/australia-wildfire-visualization.pdf) | Visualisation de données | Python, pandas | PDF |
+| 5 | [Student Performance Analysis Dashboard](02-business-intelligence/student-performance-dashboard.pdf) | Business Intelligence | Power BI | PBIX + PDF |
+| 6 | [Rapport de consommation d'énergie](02-business-intelligence/rapport-consommation-energie.xlsx) | Reporting | Excel | XLSX |
+| 7 | [Rapport d'analyse Excel](02-business-intelligence/rapport-analyse-excel.xlsx) | Reporting | Excel | XLSX |
+| 8 | [Le prix du Bitcoin et les grands agrégats macroéconomiques](03-econometrie-et-statistiques/bitcoin-agregats-macroeconomiques.pdf) | Économétrie | Séries temporelles | PDF |
+| 9 | [Aspirations des étudiants — enquête statistique](03-econometrie-et-statistiques/enquete-aspirations-etudiants.pdf) | Statistique appliquée | Enquête, statistique descriptive | PDF |
 
 ---
 
@@ -62,7 +64,19 @@ Le coût d'un lancement spatial dépend directement de la capacité à récupér
 
 ---
 
-### 2. House Sales in King County, USA — Estimation du prix des logements
+### 2. Tesla & GameStop — Cours de bourse et revenus trimestriels
+
+> **Domaine** : collecte de données et visualisation · **Outils** : Python (requests, BeautifulSoup, yfinance, pandas, Plotly)
+
+Projet entièrement codé en Python : extraction des cours historiques de Tesla et GameStop via l'API **yfinance**, récupération des revenus trimestriels par **web scraping** (requests + BeautifulSoup), nettoyage et structuration des données dans des DataFrames, puis construction de graphiques interactifs **Plotly** superposant l'évolution du cours et celle du chiffre d'affaires.
+
+L'objectif : mettre en regard la valorisation boursière et la performance financière réelle des deux entreprises.
+
+📓 [Ouvrir le notebook](01-data-science-python/tesla-gamestop-stock-analysis.ipynb)
+
+---
+
+### 3. House Sales in King County, USA — Estimation du prix des logements
 
 > **Domaine** : analyse exploratoire et régression · **Outils** : Python (pandas, NumPy, SciPy, Seaborn, Matplotlib, scikit-learn)
 
@@ -74,7 +88,7 @@ Mission d'analyste de données pour un fonds d'investissement immobilier souhait
 
 ---
 
-### 3. Wildfire Activities in Australia — Analyse et visualisation
+### 4. Wildfire Activities in Australia — Analyse et visualisation
 
 > **Domaine** : visualisation de données · **Outils** : Python (pandas, Matplotlib, Seaborn), tableau de bord interactif
 
@@ -84,7 +98,7 @@ Analyse des tendances et des schémas d'activité des feux de forêt selon les r
 
 ---
 
-### 4. Student Performance Analysis Dashboard — Power BI
+### 5. Student Performance Analysis Dashboard — Power BI
 
 > **Domaine** : business intelligence · **Outils** : Power BI Desktop
 
@@ -98,7 +112,7 @@ Tableau de bord interactif analysant les résultats scolaires de **100 étudiant
 
 ---
 
-### 5. Rapport de consommation d'énergie — Excel
+### 6. Rapport de consommation d'énergie — Excel
 
 > **Domaine** : reporting et analyse tabulaire · **Outils** : Microsoft Excel
 
@@ -108,7 +122,7 @@ Rapport d'analyse de données de consommation énergétique construit sous Excel
 
 ---
 
-### 6. Rapport d'analyse Excel
+### 7. Rapport d'analyse Excel
 
 > **Domaine** : reporting et analyse tabulaire · **Outils** : Microsoft Excel
 
@@ -118,7 +132,7 @@ Travail d'analyse et de mise en forme de données sous Excel.
 
 ---
 
-### 7. Le prix du Bitcoin expliqué par les grands agrégats macroéconomiques
+### 8. Le prix du Bitcoin expliqué par les grands agrégats macroéconomiques
 
 > **Domaine** : économétrie appliquée · **Cadre** : cours d'Économétrie, CTPEA
 
@@ -128,7 +142,7 @@ Analyse économétrique sur **données trimestrielles de 2012 à 2023** visant �
 
 ---
 
-### 8. Recherche statistique sur les aspirations des étudiants
+### 9. Recherche statistique sur les aspirations des étudiants
 
 > **Domaine** : statistique appliquée et enquête · **Cadre** : Atelier de statistique appliquée, CTPEA (décembre 2023)
 
@@ -142,7 +156,8 @@ Enquête statistique menée auprès d'étudiants et conduite selon une démarche
 
 | Domaine | Compétences |
 |:--|:--|
-| **Langages et outils** | Python (pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn), R, SQL, Excel avancé, Power BI |
+| **Langages et outils** | Python (pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn, Plotly, BeautifulSoup), R, SQL, Excel avancé, Power BI |
+| **Collecte de données** | API (yfinance), web scraping, constitution et structuration de bases de données |
 | **Analyse de données** | Nettoyage et préparation, analyse exploratoire, statistique descriptive et inférentielle |
 | **Modélisation** | Régression linéaire, polynomiale et Ridge, classification, validation croisée, optimisation d'hyperparamètres, économétrie sur séries temporelles |
 | **Restitution** | Tableaux de bord interactifs, rapports analytiques, visualisation et storytelling de données |
