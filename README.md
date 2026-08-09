@@ -2,9 +2,9 @@
 
 # 📊 Projets Réalisés — Portfolio Data
 
-**Smide ALEXIS** — *Data Analyst & Data Scientist*
+**Smide ALEXIS** — *Data Analyst & Data Scientist · Économiste quantitatif*
 
-Économie appliquée et planification (CTPEA) · Science des données (IBM / Coursera)
+Économie Quantitative — CTPEA · Science des données — IBM / Coursera
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -12,7 +12,11 @@
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/smide-alexis-741380397/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:alexis.7pr22@outlook.com)
 
 </div>
 
@@ -45,8 +49,8 @@ Chaque projet est présenté ci-dessous avec son **contexte**, sa **démarche**,
 | 3 | [Prix de l'immobilier — King County, USA](01-data-science-python/king-county-house-sales-regression.pdf) | Régression | Python, pandas, scikit-learn | PDF |
 | 4 | [Feux de forêt en Australie](01-data-science-python/australia-wildfire-visualization.pdf) | Visualisation de données | Python, pandas | PDF |
 | 5 | [Student Performance Analysis Dashboard](02-business-intelligence/student-performance-dashboard.pdf) | Business Intelligence | Power BI | PBIX + PDF |
-| 6 | [Rapport de consommation d'énergie](02-business-intelligence/rapport-consommation-energie.xlsx) | Reporting | Excel | XLSX |
-| 7 | [Rapport d'analyse Excel](02-business-intelligence/rapport-analyse-excel.xlsx) | Reporting | Excel | XLSX |
+| 6 | [Consommation d'énergie — Lane Cove](02-business-intelligence/rapport-consommation-energie.xlsx) | Reporting & TCD | Excel | XLSX + PNG |
+| 7 | [Étudiants, cours et paiements — tableau de bord Excel](02-business-intelligence/rapport-analyse-excel.xlsx) | Reporting & tableau de bord | Excel | XLSX + PNG |
 | 8 | [Le prix du Bitcoin et les grands agrégats macroéconomiques](03-econometrie-et-statistiques/bitcoin-agregats-macroeconomiques.pdf) | Économétrie | Séries temporelles | PDF |
 | 9 | [Aspirations des étudiants — enquête statistique](03-econometrie-et-statistiques/enquete-aspirations-etudiants.pdf) | Statistique appliquée | Enquête, statistique descriptive | PDF |
 
@@ -82,7 +86,7 @@ L'objectif : mettre en regard la valorisation boursière et la performance finan
 
 Mission d'analyste de données pour un fonds d'investissement immobilier souhaitant se positionner sur le résidentiel : déterminer le prix de marché d'un logement à partir de ses caractéristiques. Le jeu de données couvre **21 613 transactions** décrites par **22 variables** (surface habitable, chambres, salles de bain, état général, vue sur l'eau, année de construction, localisation…).
 
-**Démarche** — nettoyage et typage des données, traitement des valeurs manquantes, analyse exploratoire et étude des corrélations, puis modélisation : régression linéaire simple et multiple, régression polynomiale et régression Ridge. Le tout industrialisé avec des *pipelines* scikit-learn (standardisation, transformation polynomiale), une validation croisée et une optimisation des hyperparamètres par `GridSearchCV`. Évaluation par le R² et l'erreur quadratique moyenne.
+**Démarche** — nettoyage et typage des données, traitement des valeurs manquantes, analyse exploratoire et étude des corrélations, puis modélisation : régression linéaire simple et multiple, régression polynomiale et régression Ridge. Le tout industrialisé avec des *pipelines* scikit-learn (standardisation, transformation polynomiale), une validation croisée et une optimisation des hyperparamètres par recherche sur grille. Évaluation par le R² et l'erreur quadratique moyenne.
 
 📄 [Consulter le rapport](01-data-science-python/king-county-house-sales-regression.pdf)
 
@@ -112,65 +116,84 @@ Tableau de bord interactif analysant les résultats scolaires de **100 étudiant
 
 ---
 
-### 6. Rapport de consommation d'énergie — Excel
+### 6. Consommation d'énergie de la commune de Lane Cove — Excel
 
-> **Domaine** : reporting et analyse tabulaire · **Outils** : Microsoft Excel
+> **Domaine** : reporting et analyse tabulaire · **Outils** : Excel (tableaux croisés dynamiques, segments, graphiques croisés dynamiques)
 
-Rapport d'analyse de données de consommation énergétique construit sous Excel.
+Analyse d'un portefeuille de **1 066 comptes clients** répartis entre quatre fournisseurs d'électricité, et suivi de la consommation de la commune de **Lane Cove** sur neuf exercices (2005-2006 à 2013-2014), pour un cumul de **7 229 941 kWh**.
 
-📁 [Télécharger le classeur](02-business-intelligence/rapport-consommation-energie.xlsx)
+**Démarche** — construction de tableaux croisés dynamiques pour compter les comptes par fournisseur et agréger la consommation par exercice, mise en place de **segments interactifs** (fournisseur, commune, exercice) et d'un graphique croisé dynamique de suivi temporel.
 
----
+**Lecture** — la consommation se maintient autour de 1 000 000 kWh par an jusqu'en 2009-2010 (pic à 1 173 755 kWh), puis chute brutalement à partir de 2010-2011 (598 151 kWh) et poursuit sa baisse jusqu'à 159 046 kWh en 2013-2014.
 
-### 7. Rapport d'analyse Excel
+<p align="center">
+  <img src="02-business-intelligence/rapport-consommation-energie-apercu.png" alt="Aperçu du rapport de consommation d'énergie" width="850">
+</p>
 
-> **Domaine** : reporting et analyse tabulaire · **Outils** : Microsoft Excel
-
-Travail d'analyse et de mise en forme de données sous Excel.
-
-📁 [Télécharger le classeur](02-business-intelligence/rapport-analyse-excel.xlsx)
+📁 [Ouvrir le classeur Excel](02-business-intelligence/rapport-consommation-energie.xlsx) · 🖼️ [Aperçu en grand](02-business-intelligence/rapport-consommation-energie-apercu.png)
 
 ---
 
-### 8. Le prix du Bitcoin expliqué par les grands agrégats macroéconomiques
+### 7. Étudiants, cours et paiements — tableau de bord Excel
 
-> **Domaine** : économétrie appliquée · **Cadre** : cours d'Économétrie, CTPEA
+> **Domaine** : reporting et tableau de bord · **Outils** : Excel (formules de comptage conditionnel, graphiques en secteurs, histogrammes, graphique combiné, sparklines, courbe de tendance)
 
-Analyse économétrique sur **données trimestrielles de 2012 à 2023** visant à expliquer l'évolution du prix du Bitcoin à partir des principaux agrégats économiques des pays développés et des pays les plus peuplés. Le travail articule construction de la base de données, spécification du modèle, estimation et interprétation économique des résultats.
+Tableau de bord complet construit à partir d'une base de **248 étudiants** répartis sur trois campus (Sydney 124, Melbourne 83, Brisbane 41) et trois filières (Business 114, Accounting 77, Marketing 57).
 
-📄 [Consulter l'étude](03-econometrie-et-statistiques/bitcoin-agregats-macroeconomiques.pdf)
+**Contenu du tableau de bord** — répartition des effectifs par campus et par cours, nombre d'étudiants inscrits à plus de quatre unités ou à une seule unité par semestre, nombre d'échecs par semestre (dont les échecs en comptabilité), paiements totaux par campus et par filière (Sydney 2 983 500 $, Melbourne 2 008 800 $, Brisbane 1 028 700 $), nombre d'unités par semestre avec sparklines de tendance, graphique combiné unités / paiements, et courbe de tendance polynomiale sur les unités de comptabilité (R² = 1).
 
----
+<p align="center">
+  <img src="02-business-intelligence/rapport-analyse-excel-apercu.png" alt="Aperçu du tableau de bord Excel étudiants" width="850">
+</p>
 
-### 9. Recherche statistique sur les aspirations des étudiants
-
-> **Domaine** : statistique appliquée et enquête · **Cadre** : Atelier de statistique appliquée, CTPEA (décembre 2023)
-
-Enquête statistique menée auprès d'étudiants et conduite selon une démarche de recherche complète : justification du sujet, problématique, hypothèse et objectifs, choix des variables, matériels et méthodes, puis analyse et discussion des résultats — répartition par niveau d'étude et par sexe, départements souhaités par les étudiants de première et deuxième année.
-
-📄 [Consulter l'étude](03-econometrie-et-statistiques/enquete-aspirations-etudiants.pdf)
+📁 [Ouvrir le classeur Excel](02-business-intelligence/rapport-analyse-excel.xlsx) · 🖼️ [Aperçu en grand](02-business-intelligence/rapport-analyse-excel-apercu.png)
 
 ---
 
-## 🧰 Compétences mises en œuvre
+### 8. Le prix du Bitcoin et les grands agrégats macroéconomiques
 
-| Domaine | Compétences |
+> **Domaine** : économétrie appliquée · **Cadre** : cours d'Économétrie 1, CTPEA
+
+Analyse économétrique trimestrielle du prix du Bitcoin en fonction des principaux agrégats économiques des pays développés et des pays les plus peuplés, sur la période **2012–2023**. Le travail articule construction de la base de données, spécification du modèle, estimation et interprétation économique des résultats.
+
+📄 [Consulter le mémoire](03-econometrie-et-statistiques/bitcoin-agregats-macroeconomiques.pdf)
+
+---
+
+### 9. Aspirations des étudiants — enquête statistique
+
+> **Domaine** : statistique appliquée · **Cadre** : Atelier de Statistique Appliquée, CTPEA (décembre 2023)
+
+Enquête de terrain sur les aspirations des étudiants : problématique, hypothèses et objectifs, choix des matériels et méthodes, définition des variables, puis analyse des résultats (répartition par niveau d'étude et par sexe, départements d'études souhaités).
+
+📄 [Consulter le rapport](03-econometrie-et-statistiques/enquete-aspirations-etudiants.pdf)
+
+---
+
+## 🧠 Compétences mises en œuvre
+
+| Domaine | Détail |
 |:--|:--|
-| **Langages et outils** | Python (pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn, Plotly, BeautifulSoup), R, SQL, Excel avancé, Power BI |
-| **Collecte de données** | API (yfinance), web scraping, constitution et structuration de bases de données |
-| **Analyse de données** | Nettoyage et préparation, analyse exploratoire, statistique descriptive et inférentielle |
-| **Modélisation** | Régression linéaire, polynomiale et Ridge, classification, validation croisée, optimisation d'hyperparamètres, économétrie sur séries temporelles |
-| **Restitution** | Tableaux de bord interactifs, rapports analytiques, visualisation et storytelling de données |
-| **Métier** | Économie appliquée, planification économique, analyse de marché |
+| **Langages** | Python, R, SQL |
+| **Manipulation de données** | pandas, NumPy, nettoyage, traitement des valeurs manquantes, jointures, agrégations |
+| **Collecte** | API (yfinance), web scraping (requests, BeautifulSoup) |
+| **Machine learning** | Régression linéaire, polynomiale et Ridge, classification, pipelines, validation croisée, recherche d'hyperparamètres |
+| **Économétrie & statistique** | Séries temporelles, modélisation macroéconomique, conception d'enquête, statistique descriptive et inférentielle |
+| **Visualisation & BI** | Power BI, Plotly, Matplotlib, Seaborn, tableaux de bord interactifs |
+| **Excel avancé** | Tableaux croisés dynamiques, segments, graphiques combinés, sparklines, courbes de tendance |
 
 ---
 
 ## 📫 Contact
 
-- GitHub — [@Smithy-22](https://github.com/Smithy-22)
-
 <div align="center">
 
-*Merci de votre visite. N'hésitez pas à parcourir les rapports : chacun retrace l'intégralité de la démarche, de la donnée brute à la recommandation.*
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/smide-alexis-741380397/)
+[![Email](https://img.shields.io/badge/alexis.7pr22@outlook.com-EA4335?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:alexis.7pr22@outlook.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Smithy-22)
+
+**Smide ALEXIS** · Port-au-Prince, Haïti · +509 3388 9930
+
+*Ouvert aux opportunités en analyse de données, business intelligence et data science.*
 
 </div>
